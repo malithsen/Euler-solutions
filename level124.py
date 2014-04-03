@@ -17,21 +17,21 @@ def factorprod(n):
                 x = n//i
                 if isprime(x):
                     result.add(x)
-    print result
+    # print result
     return reduce(lambda x,y: x*y, result)
 
 
-# ans = []
-# counter = 0
-# for i in range(1, 100001):
-#     counter += 1
-#     # print i
-#     fp = factorprod(i)
-#     ans.append([counter, fp])
+ans = []
+counter = 0
+for i in range(1, 100001):
+    counter += 1
+    # print i
+    fp = factorprod(i)
+    ans.append([counter, fp])
 
-# res = sorted(ans, key=lambda l:l[1])
+res = sorted(ans, key=lambda l:l[1])
 
-# print res[9999]
+print res[9999][0]
 # # print res[5]
 
-print factorprod(1024)
+# print factorprod(1024)

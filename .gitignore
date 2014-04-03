@@ -1,0 +1,6 @@
+*.txt
+*.sublime*
+*.pyc
+*.vim
+*~
+*.swp

@@ -12,11 +12,13 @@ def factorprod(n):
     result = set()
     for i in range(1, int(math.sqrt(n)) + 1):
         if not n % i:
+            x = n//i
+            if isprime(x):
+                result.add(x)
             if isprime(i):
                 result.add(i)
-                x = n//i
-                if isprime(x):
-                    result.add(x)
+                # if isprime(x):
+                #     result.add(x)
     # print result
     return reduce(lambda x,y: x*y, result)
 
@@ -31,7 +33,7 @@ for i in range(1, 100001):
 
 res = sorted(ans, key=lambda l:l[1])
 
-print res[9999][0]
+print res[9999]
 # # print res[5]
 
 # print factorprod(1024)
